@@ -1,0 +1,8 @@
+# Enable mod_rewrite engine
+RewriteEngine on
+
+# Rewrite base path
+RewriteBase /
+
+RewriteCond $1 !^(index\.php|assets|cache|documentation|robots\.txt)
+RewriteRule ^(.*)$ /index.php/$1 [L]
